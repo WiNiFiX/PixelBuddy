@@ -1,0 +1,49 @@
+﻿<Controls:MetroWindow x:Class="PixelBuddyWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        mc:Ignorable="d"
+        Title="Notepad" 
+        Height="600" 
+        Width="1000" 
+        WindowStartupLocation="CenterScreen"
+        TitleCharacterCasing="Normal"
+        GlowBrush="{DynamicResource AccentColorBrush}" 
+        WindowStyle="ThreeDBorderWindow" Loaded="MainWindow_OnLoaded" Icon="/NOTEPAD;component/app.ico">
+        
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="260*"/>
+            <ColumnDefinition Width="257*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid RenderTransformOrigin="0.5,0.544">
+            <RichTextBox x:Name="richTextBox" HorizontalAlignment="Left" Height="524" Margin="4,35,-383,0" VerticalAlignment="Top" Width="878">
+                <FlowDocument>
+                    <Paragraph>
+                        <Run Text=""/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+            <Button x:Name="cmdStartStop" Content="Start" HorizontalAlignment="Left" Margin="887,35,-488,0" VerticalAlignment="Top" Width="100" Height="30" Click="cmdStartStop_Click"/>
+        </Grid>
+        <Menu x:Name="menu" Height="32" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.Column="0">
+            <MenuItem Header="File">
+                <MenuItem x:Name="cmdLoad" Header="Load" Click="cmdLoad_OnClick"/>
+                <MenuItem x:Name="cmdSave" Header="Save" Click="cmdSave_OnClick"/>
+            </MenuItem>
+            <MenuItem Header="Edit Current File" Click="MenuItem_OnClick"/>
+        </Menu>
+        <CheckBox x:Name="chkEditMode" Content="Edit Mode" Grid.Column="1" HorizontalAlignment="Left" Margin="389,72,0,0" VerticalAlignment="Top" Checked="chkEditMode_Checked"/>
+    </Grid>
+    <Controls:MetroWindow.WindowButtonCommands>
+        <Controls:WindowButtonCommands Minimize="Minimize the window"
+                                       Maximize="Maximize the window"
+                                       Restore="Restore the window"
+                                       Close="Noooo... don't close me!">
+        </Controls:WindowButtonCommands>
+    </Controls:MetroWindow.WindowButtonCommands>
+</Controls:MetroWindow>
+
