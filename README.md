@@ -1,8 +1,8 @@
 # PixelBuddy
 
-Developer: WiNiFiX
-Copyright Owner: WiNiFiX
-Started on Project: Jan 2017
+Developer: WiNiFiX<br>
+Copyright Owner: WiNiFiX<br>
+Started on Project: Jan 2017<br>
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
 BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
